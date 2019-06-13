@@ -1,8 +1,16 @@
-// console.log('My Minimal React Webpack Babel Setup');
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import App from '../components/App';
+
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('app')
+// );
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../components/App';
-// const title = 'sdfasdfcvcZXCZXC this xczvzxcvxzcvzxcvzxcv load asdfasdfasdfasdf';
+import Route from '../components2/Router';
+import App from '../components2/App';
 
 ReactDOM.render(
   <App />,

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Question from "./Question";
-import Result from "./Results";
-import TestComponent from "./Result";
+import Result from "./Result";
 
 export class App extends Component {
   constructor(props) {
@@ -113,7 +112,7 @@ export class App extends Component {
       "I have a rich vocabulary.",
       "I don't talk a lot.",
       "I am interested in people.",
-      "Leave my belongings around.",
+      "I Leave my belongings around.",
       "I am relaxed most of the time.",
       "I have difficulty understanding abstract ideas.",
       "I feel comfortable around people.",
@@ -167,12 +166,12 @@ export class App extends Component {
         />
       );
     });
-    console.log("hold norms", holdNorms);
-    console.log("openness", this.state.Openness);
-    console.log("extra", this.state.Extraversion);
-    console.log("consc", this.state.Conscientiousness);
-    console.log("agree", this.state.Agreeableness);
-    console.log("es", this.state.EmotionalStability);
+    // console.log("hold norms", holdNorms);
+    // console.log("openness", this.state.Openness);
+    // console.log("extra", this.state.Extraversion);
+    // console.log("consc", this.state.Conscientiousness);
+    // console.log("agree", this.state.Agreeableness);
+    // console.log("es", this.state.EmotionalStability);
 
     let hold = (
       <Result
@@ -202,7 +201,7 @@ export class App extends Component {
           scoreES={this.state.EmotionalStability} 
           /> */}
           {/* { hold } */}
-          <TestComponent
+          <Result
             norms={this.state.testOneNorm}
             scoreO={this.state.Openness}
             scoreE={this.state.Extraversion}

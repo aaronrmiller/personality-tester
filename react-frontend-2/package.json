@@ -23,9 +23,13 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "chart.js": "^2.8.0",
+    "css-loader": "^3.0.0",
     "react-chartjs-2": "^2.7.6",
     "react-hot-loader": "^4.11.0",
+    "react-router-dom": "^5.0.1",
+    "react-spring": "^8.0.23",
     "react-vis": "^1.11.7",
+    "style-loader": "^0.23.1",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.1"
