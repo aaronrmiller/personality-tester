@@ -4,7 +4,7 @@ import { Radar } from 'react-chartjs-2';
 
 
 export default function TestComponent({ norms, scoreO, scoreE, scoreC, scoreA, scoreES }) {
-  console.log('testing props from test component', norms.Openness)
+  console.log('testing props from test component TESTING NORMS', norms)
 
   const data = {
     labels: [

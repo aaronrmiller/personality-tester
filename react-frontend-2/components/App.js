@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Question from "./Question";
 import Result from "./Results";
-import TestComponent from './Result';
+import TestComponent from "./Result";
 
 export class App extends Component {
   constructor(props) {
@@ -40,7 +40,7 @@ export class App extends Component {
     this.setState({
       [itemId]: this.state[itemId] + updatedValue
     });
-    console.log(this.state)
+    console.log(this.state);
   }
 
   onSubmit2(e) {
@@ -83,19 +83,25 @@ export class App extends Component {
       .then(res => {
         res = JSON.parse(res);
         // console.log(typeof res);
-        const { OpennessNorm, ConscientiousnessNorm, ExtraversionNorm, AgreeablenessNorm, EmotionalStabilityNorm } = res;
-        // OpennessNorm: 13.59, ConscientiousnessNorm: 11.67, ExtraversionNorm: 10.13, AgreeablenessNorm: 13.48, EmotionalStabilityNorm: 6.57}
-        // console.log(res)
-        this.setState({
-         testOneNorm: {
+        const {
           OpennessNorm,
           ConscientiousnessNorm,
           ExtraversionNorm,
           AgreeablenessNorm,
-          EmotionalStabilityNorm,
-         }   
+          EmotionalStabilityNorm
+        } = res;
+        // OpennessNorm: 13.59, ConscientiousnessNorm: 11.67, ExtraversionNorm: 10.13, AgreeablenessNorm: 13.48, EmotionalStabilityNorm: 6.57}
+        // console.log(res)
+        this.setState({
+          testOneNorm: {
+            OpennessNorm,
+            ConscientiousnessNorm,
+            ExtraversionNorm,
+            AgreeablenessNorm,
+            EmotionalStabilityNorm
+          }
         });
-      })
+      });
   }
   render() {
     // console.log('rerender', this.state)
@@ -134,8 +140,8 @@ export class App extends Component {
       ExtraversionNorm: 10.13,
       AgreeablenessNorm: 13.48,
       EmotionalStabilityNorm: 6.57
-    }
-        // testing format { OpennessNorm: 13.59,
+    };
+    // testing format { OpennessNorm: 13.59,
     //   ConscientiousnessNorm: 11.67,
     //   ExtraversionNorm: 10.13,
     //   AgreeablenessNorm: 13.48,
@@ -161,21 +167,23 @@ export class App extends Component {
         />
       );
     });
-    console.log('hold norms', holdNorms)
-    console.log('openness', this.state.Openness)
-    console.log('extra', this.state.Extraversion)
-    console.log('consc', this.state.Conscientiousness);
-    console.log('agree', this.state.Agreeableness)
-    console.log('es', this.state.EmotionalStability)
+    console.log("hold norms", holdNorms);
+    console.log("openness", this.state.Openness);
+    console.log("extra", this.state.Extraversion);
+    console.log("consc", this.state.Conscientiousness);
+    console.log("agree", this.state.Agreeableness);
+    console.log("es", this.state.EmotionalStability);
 
-    let hold = <Result 
-    norms={holdNorms}
-    scoreO={this.state.Openness} 
-    scoreE={this.state.Extraversion} 
-    scoreC={this.state.Conscientiousness} 
-    scoreA={this.state.Agreeableness} 
-    scoreES={this.state.EmotionalStability} 
-    />
+    let hold = (
+      <Result
+        norms={holdNorms}
+        scoreO={this.state.Openness}
+        scoreE={this.state.Extraversion}
+        scoreC={this.state.Conscientiousness}
+        scoreA={this.state.Agreeableness}
+        scoreES={this.state.EmotionalStability}
+      />
+    );
     return (
       <div className="wrapper">
         <div className="pers-form">
@@ -195,12 +203,12 @@ export class App extends Component {
           /> */}
           {/* { hold } */}
           <TestComponent
-              norms={holdNorms}
-              scoreO={this.state.Openness} 
-              scoreE={this.state.Extraversion} 
-              scoreC={this.state.Conscientiousness} 
-              scoreA={this.state.Agreeableness} 
-              scoreES={this.state.EmotionalStability}
+            norms={this.state.testOneNorm}
+            scoreO={this.state.Openness}
+            scoreE={this.state.Extraversion}
+            scoreC={this.state.Conscientiousness}
+            scoreA={this.state.Agreeableness}
+            scoreES={this.state.EmotionalStability}
           />
         </div>
       </div>
