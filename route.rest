@@ -1,0 +1,25 @@
+GET http://localhost:5000/ HTTP/1.1
+
+###
+
+GET http://localhost:5000/testone/results HTTP/1.1
+
+###
+
+POST http://localhost:5000/testone/testonelastitem HTTP/1.1
+content-type: application/json
+
+{
+  "Openness": 1,
+  "Conscientiousness": 2,
+  "Extraversion": 3,
+  "Agreeableness": 4,
+  "EmotionalStability": 5 
+}
+
+###
+
+GET http://localhost:5000/testone/testonemostrecent
+
+###
+GET http://localhost:5000/testone/testonenorms
