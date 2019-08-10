@@ -1,7 +1,7 @@
-TODOS:
+# personality-tester
 
-Refactor code to eliminate:
-  -re-render bug
-  -memory leak
-  -add in conditional rendering for multiple pages
-  
+TODO:
+Refactor:
+  -Fix bugged rerender of chart by changing component hierarchy
+  -Fix transition overlay bug by switching api
+  -Add conditional rendering to display user results
