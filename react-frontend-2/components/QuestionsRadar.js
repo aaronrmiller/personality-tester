@@ -1,11 +1,9 @@
-import React from 'react';
 import { Radar } from 'react-chartjs-2';
+import React from 'react'
 
-
-
-export default function TestComponent({ norms, scoreO, scoreE, scoreC, scoreA, scoreES }) {
+export default function TestComponent({ testOneNorm, testOneScores }) {
   // console.log('testing props from test component TESTING NORMS', norms)
-
+  console.log('testing radar chart data', testOneNorm)
   const data = {
     labels: [
       "Openness",
@@ -19,11 +17,11 @@ export default function TestComponent({ norms, scoreO, scoreE, scoreC, scoreA, s
         label: "Your Score",
         backgroundColor: "rgb(237,33,124, 0.9)",
         data: [
-          scoreO,
-          scoreC,
-          scoreE,
-          scoreA,
-          scoreES,
+          testOneScores.Openness,
+          testOneScores.Conscientiousness,
+          testOneScores.Extraversion,
+          testOneScores.Agreeableness,
+          testOneScores.EmotionalStability,
         ]
       },
       {
@@ -31,11 +29,11 @@ export default function TestComponent({ norms, scoreO, scoreE, scoreC, scoreA, s
         backgroundColor: "rgba(20,255,247, 0.5)",
         
         data: [
-          norms.OpennessNorm,
-          norms.ConscientiousnessNorm,
-          norms.ExtraversionNorm,
-          norms.AgreeablenessNorm,
-          norms.EmotionalStabilityNorm,
+          testOneNorm.OpennessNorm,
+          testOneNorm.ConscientiousnessNorm,
+          testOneNorm.ExtraversionNorm,
+          testOneNorm.AgreeablenessNorm,
+          testOneNorm.EmotionalStabilityNorm,
         ],
       },
     ]

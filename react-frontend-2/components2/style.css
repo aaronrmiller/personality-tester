@@ -1,0 +1,50 @@
+/* .test {
+  height: 100vh;
+  width: 100%;
+}
+.testing {
+  background-color: blue;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  justify-content: center;
+}
+
+.items > p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  
+
+}
+.button {
+  font-size: 2rem;
+  font-weight: lighter;
+  outline: none;
+  border-radius: 10px;
+  width: 75%;
+  margin-top: .75rem;
+} 
+
+.button:hover {
+  border: 2px solid blue;
+}
+
+.chart {
+  border: 2px solid black;
+
+}
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+} */

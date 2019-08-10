@@ -40,34 +40,58 @@
 // }
 
 
+// import React, { Component } from 'react';
+
+// export class Question extends Component {
+//   render() {
+//     const { number, question, itemId, polarity, onChoose } = this.props;
+
+//     const buttons = buttonVals.map((item, index, array) => {
+//     return (
+//     <Button
+//     key={index} 
+//     value={item}
+//     itemId={itemId}
+//     polarity={polarity}
+//     onChoose={onChoose}
+//     numVal={index + 1}
+//     />
+//     );
+//   });
+//     return (
+//       <div>
+//        <p> Question { number } </p>
+//        <p>{ question }</p>
+//       { buttons }
+//       </div>
+//     )
+//   }
+// }
+
+// export default Question
 import React, { Component } from 'react';
 import Button from './Button';
+const buttonVals = ['Very Inaccurate', 'Moderately Inaccurate', 'Neither Accurate Nor Inaccurate', 'Moderately Accurate', 'Very Accurate'];
 
-export class Question extends Component {
-  render() {
-    const { number, question, itemId, polarity, onClick } = this.props;
-    const buttonVals = ['Very Inaccurate', 'Moderately Inaccurate', 'Neither Accurate Nor Inaccurate', 'Moderately Accurate', 'Very Accurate'];
-
-    const buttons = buttonVals.map((item, index, array) => {
+const Question = ({ number, question, itemId, polarity, onChoose }) => {
+  const buttons = buttonVals.map((item, index, array) => {
     return (
     <Button
     key={index} 
     value={item}
     itemId={itemId}
     polarity={polarity}
-    onClick={onClick}
+    onChoose={onChoose}
     numVal={index + 1}
     />
     );
-  });
-    return (
-      <div>
-       <p> Question { number } </p>
-       <p>{ question }</p>
-      { buttons }
-      </div>
-    )
-  }
+    });
+
+  return (
+    <div>
+      {buttons}
+    </div>
+  )
 }
 
 export default Question

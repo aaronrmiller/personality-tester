@@ -1,9 +1,7 @@
 import React from 'react';
 import { Radar } from 'react-chartjs-2';
 
-
-
-export default function TestComponent({ norms, scoreO, scoreE, scoreC, scoreA, scoreES }) {
+export default function Result({ norms, scoreO, scoreE, scoreC, scoreA, scoreES }) {
   // console.log('testing props from test component TESTING NORMS', norms)
 
   const data = {
@@ -38,9 +36,14 @@ export default function TestComponent({ norms, scoreO, scoreE, scoreC, scoreA, s
           norms.EmotionalStabilityNorm,
         ],
       },
-    ]
+    ],
   };
-
+  // options: {
+  //   scale: {
+  //     pointLabels: {
+  //       fontSize: 20,
+  //   },
+  // }
   const options = {
     legend: {
       position: 'bottom',
@@ -55,8 +58,20 @@ export default function TestComponent({ norms, scoreO, scoreE, scoreC, scoreA, s
         color: [
           'black',
           'red',
-        ]
+        ],
+        pointLabels: {
+          fontSize: '50px',
+        },
       }
+    },
+    padding: {
+      // top: 5,
+      // bottom: 5,
+    },
+    borderColor: "rgba(255,255,255,0)",
+    titleFontSize: '16px',
+    toolTips: {
+      titleFontSize: '24',
     },
     ticks: {
       beginAtZero: true,
